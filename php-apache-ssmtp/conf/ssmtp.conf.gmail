@@ -1,0 +1,13 @@
+root=$mail
+# The place where the mail goes. The actual machine name is required no
+# MX records are consulted. Commonly mailhosts are named mail.domain.com
+mailhub=smtp.gmail.com:587
+
+# Debug=Yes
+
+FromLineOverride=YES
+
+AuthUser=$mail
+AuthPass=$pass
+UseSTARTTLS=YES
+UseTLS=YES

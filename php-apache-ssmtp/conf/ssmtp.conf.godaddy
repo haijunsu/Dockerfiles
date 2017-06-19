@@ -1,0 +1,13 @@
+# For Exchange 2007
+mailhub=smtp.ex1.secureserver.net:465
+# For Exchange 2010 (pick one)
+# mailhub=smtp.ex2.secureserver.net:587
+# mailhub=smtp.ex3.secureserver.net:587
+mailhub=smtp.ex4.secureserver.net:587
+
+FromLineOverride=yes
+UseSTARTTLS=yes
+UseTLS=yes
+
+Authuser=
+AuthPass=

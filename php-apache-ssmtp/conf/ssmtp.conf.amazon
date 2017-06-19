@@ -1,0 +1,13 @@
+# debug=yes
+
+mailhub=email-smtp.us-east-1.amazonaws.com:465
+
+Hostname=www.example.com
+AuthUser=AAAAAAAAAAAETRLB2UWQ
+AuthPass=[password from AWS]
+
+FromLineOverride=yes
+UseTLS=yes
+
+# Also, update the /etc/ssmtp/revaliases.
+# root:user@example.com:email-smtp.us-east-1.amazonaws.com:465
