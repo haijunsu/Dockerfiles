@@ -2,8 +2,7 @@ version: '3'
 
 services:
   web-php:
-    build: .
-    image: php-apache-ssmtp
+    image: navysu/php-apache-ssmtp
     container_name: ${CONTAINER_NAME}
     ports:
       - "${HTTP_PORT}:80"
