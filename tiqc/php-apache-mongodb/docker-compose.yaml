@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+    mongodb:
+        image: mongo:3
+        container_name: my-mongodb
+        restart: always
+
+    myweb:
+        image: tiqc/php-apache-mongodb
+        container_name: my-web-mongo
+        ports:
+            - "8004:80"
+        restart:
+            always
+        links:
+            - mongodb:mydb
+        volumes:
+            - ./web:/var/www/html
