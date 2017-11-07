@@ -6,7 +6,8 @@ docker-compose up -d
 ```
 
 * Modify volumes/nginx/conf/myserver.conf with your domain name
-* Run `getCerts.sh`
+
+* Run `getCerts.sh` to get certificates
 ```
 ./getCerts.sh -d <your domain name>
 ```
@@ -15,5 +16,5 @@ docker-compose up -d
 
 * Reboot nginx container
 ```
-docker-compose restore my-web
+docker-compose restart my-web
 ```
