@@ -5,7 +5,7 @@
 docker-compose up -d
 ```
 
-* Modify volumes/nginx/conf/myserver.conf with your domain name
+* Modify volumes/nginx/conf/myserver.conf and volumes/nginx/conf/myserver-ssl.conf.rename.after.get.certificates with your domain name
 
 * Run `getCerts.sh` to get certificates
 ```
@@ -14,7 +14,7 @@ docker-compose up -d
 
 * Copy myserver-ssl.conf.rename.after.get.certificates myserver.conf to volumes/nginx/conf/myserver-ssl.conf
 
-* Reboot nginx container
+* Restart nginx container
 ```
 docker-compose restart my-web
 ```
