@@ -1,0 +1,23 @@
+version: '3'
+services:
+    my-web:
+        image: nginx
+        container_name: my-web
+        restart: always
+        ports:
+            - 80:80
+            - 443:443
+        volumes:
+            - ./volumes/certs:/etc/letsencrypt
+            - ./volumes/certs-data:/data/letsencrypt
+            - ./volumes/nginx/conf:/etc/nginx/conf.d
+    
+    my-certbot:
+        image: navysu/certbot
+        container_name: my-certbot
+        restart: always
+        volumes:
+            - ./volumes/certs:/etc/letsencrypt
+            - ./volumes/certs-data:/data/letsencrypt
+            - ./volumes/certbot/conf/cronjobs:/jobs/cronjobs
+        
