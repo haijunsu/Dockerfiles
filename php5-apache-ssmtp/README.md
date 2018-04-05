@@ -9,7 +9,7 @@ Docker image with Apache and SSMTP installed. You need to pass the /etc/ssmtp/ss
 version: '3'
 services:
   web-php:
-    image: navysu/php-apache-ssmtp
+    image: navysu/php5-apache-ssmtp
     container_name: ${CONTAINER_NAME}
     ports:
       - "${HTTP_PORT}:80"
