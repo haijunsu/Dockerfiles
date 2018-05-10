@@ -7,7 +7,7 @@ Yaml file example
 ```yaml
 version: "2"
 services:
-  data-transfer:
+  web:
     image: "tiqc/flask-uwsgi-nginx"
     volumes:
       - ./web:/app
