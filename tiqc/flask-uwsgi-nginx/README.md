@@ -10,7 +10,7 @@ services:
   data-transfer:
     image: "tiqc/flask-uwsgi-nginx"
     volumes:
-      - ./web/data_transfer:/app
+      - ./web:/app
     ports:
       - "${HTTP_PORT}:80"
     environment:
