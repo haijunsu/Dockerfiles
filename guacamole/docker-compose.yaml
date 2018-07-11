@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+
+  guacd:
+    hostname: guacd
+    image: guacamole/guacd:${VERSION}
+    restart: always
+
+  guacamole:
+    image: guacamole/guacamole:${VERSION}
+    restart: always
+    ports:
+      - ${HTTP_PORT}:8080
+    links:
+      - guacd
+        #volumes:
+            #     - ./i18n/en.json-v${VERSION}:/usr/local/tomcat/webapps/guacamole/translations/en.json
+    environment:
+      GUACD_HOSTNAME: guacd
+      MYSQL_HOSTNAME: ${MYSQL_HOSTNAME}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+

@@ -1,2 +1,2 @@
 docker-crontab/conf/cronjobs
-mysql/.env
+**/.env
