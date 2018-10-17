@@ -1,0 +1,10 @@
+version: '3'
+services:
+  proxysql:
+    #build: .
+    image: "navysu/proxysql:1.4.12"
+    ports:
+     - "6033:6033"
+    volumes:
+      - ./config/myproxysql.cnf:/etc/proxysql.cnf
+      #- ./config/proxysql.cfg:/etc/proxysql.cfg
