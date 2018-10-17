@@ -7,7 +7,7 @@ ENV PROXYSQL_VERSION=1.4.12
 RUN deps=' \
     curl \
     ca-certificates \
-    mysql-client-5.7 \
+    mariadb-client \
     python-mysqldb \
   ' \
   && set -x \
