@@ -1,5 +1,7 @@
 FROM ubuntu:16.04
 
+MAINTAINER Haijun (Navy) Su <navysu@gmail.com>
+
 ENV PROXYSQL_VERSION=1.4.12
 
 RUN deps=' \
