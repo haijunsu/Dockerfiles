@@ -16,7 +16,7 @@
     "start": "nodemon server.js"
   },
   "dependencies": {
-    "hoek": "~>5.0.3",
+    "hoek": "^4.2.1",
     "bcrypt": "^2.0.0",
     "body-parser": "^1.18.2",
     "connect-ensure-login": "^0.1.1",
