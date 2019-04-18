@@ -1,4 +1,4 @@
-FROM navysu/python-ssmtp
+FROM python:3.6
 
 MAINTAINER Haijun (Navy) Su <navysu@gmail.com>
 
