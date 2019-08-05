@@ -6,12 +6,22 @@ services:
     hostname: guacd
     image: guacamole/guacd:${VERSION}
     restart: always
+    logging:
+      driver: 'json-file'
+      options:
+        max-file: '2'
+        max-size: '10m'
 
   guacamole:
     image: guacamole/guacamole:${VERSION}
     restart: always
     ports:
       - ${HTTP_PORT}:8080
+    logging:
+      driver: 'json-file'
+      options:
+        max-file: '2'
+        max-size: '10m'
     links:
       - guacd
         #volumes:
