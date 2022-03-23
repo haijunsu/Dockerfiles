@@ -8,14 +8,19 @@ services:
     ports:
       - 3306:3306
     volumes:
-      - data:/var/lib/mysql
+      - ./data:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
       MYSQL_DATABASE: ${MYSQL_DATABASE}
       MYSQL_USER: ${MYSQL_USER}
       MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    command: --transaction-isolation=READ-COMMITTED --binlog-format=ROW
 
-volumes:
-  data:
+      #volumes:
+      #data:
 
+networks:
+  default:
+    external:
+      name: my-docker-network
 
